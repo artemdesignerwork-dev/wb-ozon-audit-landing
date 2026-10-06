@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Бесплатный разбор главного фото карточки WB и Ozon</title>
+<meta name="description" content="UX-дизайнер бесплатно разберёт обложку вашей карточки на Wildberries или Ozon по 12 критериям площадок и скажет, что исправить первым. Ответ в Telegram за 24 часа, без созвонов и доступа к кабинету.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@600;700&family=Onest:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">К содержанию</a>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <header class="hero__nav">
+      <nav class="hero__links" aria-label="Разделы">
+        <a href="#case">Пример</a>
+        <a href="#criteria">Критерии</a>
+        <a href="#price">Цены</a>
+        <a href="#about">Обо мне</a>
+        <a href="#faq">Вопросы</a>
+      </nav>
+      <a class="btn btn--light btn--sm" aria-label="Написать в Telegram" data-tg href="https://t.me/Artfreelancer" target="_blank" rel="noopener">
+        <span class="btn__label">Telegram</span>
+        <span class="btn__disc" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg></span>
+      </a>
+    </header>
+
+    <h1 class="hero__title" id="hero-title">Проверю обложку вашей карточки бесплатно</h1>
+
+    <div class="hero__stage">
+      <div class="hero__band hero__band--left">
+        <svg class="hero__icon" viewBox="0 0 64 32" aria-hidden="true">
+          <circle cx="16" cy="16" r="15"/><rect x="9" y="9" width="6" height="6" rx="1"/><rect x="17" y="9" width="6" height="6" rx="1"/><rect x="9" y="17" width="6" height="6" rx="1"/><rect x="17" y="17" width="6" height="6" rx="1"/>
+          <circle cx="44" cy="16" r="15"/><circle cx="42" cy="14" r="5"/><path d="m45.5 17.5 5 5"/>
+        </svg>
+        <p><strong>Wildberries и&nbsp;Ozon</strong><span>12 критериев площадок</span></p>
+      </div>
+
+      <figure class="hero__card">
+        <img src="assets/case-cover.png" width="1350" height="870" alt="Реальный разбор: оценка обложки 54 из 100 и вывод «обложка продаёт ассистента, но не показывает наушники». Бренд скрыт.">
+        <figcaption>Реальный разбор: 54/100</figcaption>
+      </figure>
+
+      <div class="hero__band hero__band--right">
+        <p><strong>Ответ за 24 часа</strong><span>Без созвонов и&nbsp;доступа к&nbsp;кабинету</span></p>
+        <svg class="hero__icon" viewBox="0 0 64 32" aria-hidden="true">
+          <circle cx="16" cy="16" r="15"/><circle cx="16" cy="16" r="8"/><path d="M16 11.5V16l3 2"/>
+          <circle cx="44" cy="16" r="15"/><path d="M37 16.5 42 21l9-10"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="hero__foot">
+      <p class="hero__badge">0&nbsp;₽<span>главное фото + 3&nbsp;проблемы</span></p>
+      <div class="hero__cta">
+        <p class="hero__sub">Покупатель решает по&nbsp;главному фото за&nbsp;секунду — ещё в&nbsp;выдаче, до&nbsp;перехода в&nbsp;карточку. Разберу вашу обложку как UX-дизайнер и&nbsp;скажу, что исправить первым.</p>
+        <a class="btn btn--light btn--lg" data-tg href="https://t.me/Artfreelancer" target="_blank" rel="noopener">
+          <span class="btn__label">Прислать ссылку в Telegram</span>
+          <span class="btn__disc" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg></span>
+        </a>
+      </div>
+      <a class="hero__down" href="#apply" aria-label="Нет Telegram? Оставить заявку на сайте">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M6 13l6 6 6-6"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Apply form -->
+  <section class="apply" id="apply" aria-labelledby="apply-title">
+    <div class="apply__head">
+      <h2 class="h2" id="apply-title">Нет Telegram под рукой? Оставьте заявку здесь</h2>
+      <p class="apply__aside">Разбор придёт в&nbsp;Telegram, который вы укажете. Ссылку на&nbsp;карточку скопируйте из&nbsp;адресной строки или кнопкой «Поделиться» в&nbsp;приложении маркетплейса.</p>
+    </div>
+
+    <form class="apply__form" id="apply-form" novalidate>
+      <div class="field field--url">
+        <label for="f-url">Ссылка на&nbsp;карточку</label>
+        <input id="f-url" name="url" type="url" inputmode="url" autocomplete="url" placeholder="https://www.wildberries.ru/catalog/…" required aria-describedby="e-url">
+        <p class="field__error" id="e-url" aria-live="polite"></p>
+      </div>
+
+      <div class="field field--tg">
+        <label for="f-tg">Ваш Telegram</label>
+        <input id="f-tg" name="telegram" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="@username" required aria-describedby="e-tg">
+        <p class="field__error" id="e-tg" aria-live="polite"></p>
+      </div>
+
+      <fieldset class="field field--chips">
+        <legend>Что беспокоит <span>— необязательно</span></legend>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="concern" value="Низкий CTR"><span>Низкий CTR</span></label>
+          <label class="chip"><input type="radio" name="concern" value="Мало заказов"><span>Мало заказов</span></label>
+          <label class="chip"><input type="radio" name="concern" value="Новая карточка"><span>Новая карточка</span></label>
+          <label class="chip"><input type="radio" name="concern" value="Не знаю"><span>Не знаю</span></label>
+        </div>
+      </fieldset>
+
+      <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="apply__submit">
+        <div class="field field--check">
+          <label class="check">
+            <input type="checkbox" name="consent" id="f-consent" required aria-describedby="e-consent">
+            <span class="check__box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="m3.5 8.5 3 3 6-7"/></svg></span>
+            <span>Даю согласие на&nbsp;обработку персональных данных по&nbsp;<a href="privacy.html" target="_blank">политике</a></span>
+          </label>
+          <p class="field__error" id="e-consent" aria-live="polite"></p>
+        </div>
+        <button class="btn btn--ink" type="submit">
+          <span class="btn__label">Отправить на проверку</span>
+          <span class="btn__disc" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg></span>
+        </button>
+      </div>
+      <p class="apply__status" id="apply-status" role="alert"></p>
+    </form>
+
+    <div class="apply__done" id="apply-done" hidden tabindex="-1">
+      <svg class="apply__tick" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23"/><path d="m14 24.5 7 7 13-15"/></svg>
+      <h3 class="apply__done-title">Заявка у&nbsp;меня</h3>
+      <p>Напишу в&nbsp;Telegram <strong id="done-tg"></strong> в&nbsp;течение 24 часов: оценка обложки и&nbsp;три проблемы, с&nbsp;которых стоит начать.</p>
+      <button class="link" type="button" id="apply-again">Отправить ещё одну карточку</button>
+    </div>
+  </section>
+
+  <!-- Case -->
+  <section class="case" id="case" aria-labelledby="case-title">
+    <div class="case__stage" id="stack">
+      <div class="case__sticky">
+        <div class="case__side">
+          <div class="case__head">
+            <h2 class="h2" id="case-title">Вот что вы получите</h2>
+            <p class="case__intro">Настоящий разбор беспроводных наушников на&nbsp;Wildberries от&nbsp;4&nbsp;октября 2026: оценка, таблица критериев и&nbsp;три проблемы, с&nbsp;которых стоит начать. Бренд и&nbsp;артикул скрыты.</p>
+          </div>
+          <ol class="case__index" role="tablist" aria-label="Слайды разбора">
+            <li><button class="pill is-active" type="button" role="tab" aria-selected="true" aria-controls="slide-0" data-step="0">
+              <span class="pill__name">Оценка 54 из&nbsp;100</span><span class="pill__plus" aria-hidden="true"></span>
+              <span class="pill__body">Одна цифра и&nbsp;одна фраза: обложка продаёт голосового ассистента, а&nbsp;самих наушников покупатель не&nbsp;видит.</span>
+            </button></li>
+            <li><button class="pill" type="button" role="tab" aria-selected="false" aria-controls="slide-1" data-step="1">
+              <span class="pill__name">12 критериев с&nbsp;баллами</span><span class="pill__plus" aria-hidden="true"></span>
+              <span class="pill__body">Каждый — от&nbsp;0 до&nbsp;2 баллов и&nbsp;с&nbsp;пометкой, на&nbsp;что влияет: конверсию, рейтинг карточки или это блокер.</span>
+            </button></li>
+            <li><button class="pill" type="button" role="tab" aria-selected="false" aria-controls="slide-2" data-step="2">
+              <span class="pill__name">3 проблемы и&nbsp;как исправить</span><span class="pill__plus" aria-hidden="true"></span>
+              <span class="pill__body">Без общих слов: «оба наушника и&nbsp;кейс на&nbsp;70–85% кадра», «один тезис вместо трёх плашек».</span>
+            </button></li>
+          </ol>
+        </div>
+
+        <div class="case__deck">
+          <figure class="slide" id="slide-0" data-i="0">
+            <figcaption class="slide__cap">Оценка 54 из&nbsp;100: обложка продаёт ассистента, а&nbsp;наушников не&nbsp;видно.</figcaption>
+            <a class="slide__open" href="assets/case-cover.png" target="_blank" aria-label="Открыть обложку разбора в полном размере"><img src="assets/case-cover.png" width="1350" height="870" alt="Обложка разбора: оценка 54 из 100, вывод «обложка на странице товара продаёт ассистента, но не показывает наушники», справа главное фото карточки. Название товара и артикул замазаны."></a>
+            <a class="slide__more" href="assets/case-cover.png" target="_blank" tabindex="-1" aria-hidden="true">Открыть крупно</a>
+          </figure>
+          <figure class="slide" id="slide-1" data-i="1">
+            <figcaption class="slide__cap">12 критериев: у&nbsp;каждого балл от&nbsp;0 до&nbsp;2 и&nbsp;метка — конверсия, рейтинг или блокер.</figcaption>
+            <a class="slide__open" href="assets/case-heuristics.png" target="_blank" aria-label="Открыть таблицу 12 критериев в полном размере"><img src="assets/case-heuristics.png" width="1350" height="1340" alt="Таблица оценки по 12 критериям: у каждого балл из 2 и метка — конверсия, рейтинг или блокер. Сумма 13 из 24, итог 54 из 100."></a>
+            <a class="slide__more" href="assets/case-heuristics.png" target="_blank" tabindex="-1" aria-hidden="true">Открыть крупно</a>
+          </figure>
+          <figure class="slide" id="slide-2" data-i="2">
+            <figcaption class="slide__cap">3 главные проблемы: почему мешают и&nbsp;как исправить.</figcaption>
+            <a class="slide__open" href="assets/case-top3.png" target="_blank" aria-label="Открыть три главные проблемы в полном размере"><img src="assets/case-top3.png" width="1350" height="1170" alt="Три главные проблемы: товар не виден, много текста на главном фото, две разные обложки. У каждой — почему и как исправить."></a>
+            <a class="slide__more" href="assets/case-top3.png" target="_blank" tabindex="-1" aria-hidden="true">Открыть крупно</a>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Criteria -->
+  <section class="criteria" id="criteria" aria-labelledby="criteria-title">
+    <div class="section-head">
+      <h2 class="h2" id="criteria-title">12 критериев, по&nbsp;которым фото оценивают покупатель и&nbsp;площадка</h2>
+      <p class="section-head__aside">Собраны из&nbsp;правил Wildberries и&nbsp;Ozon 2026 года, стандартов главного фото маркетплейсов и&nbsp;исследований Baymard Institute. Каждый — от&nbsp;0 до&nbsp;2 баллов. Блокер с&nbsp;нулём ограничивает итог 50&nbsp;баллами, как бы хорошо ни&nbsp;было остальное.</p>
+    </div>
+
+    <div class="groups">
+      <article class="group">
+        <h3>Заметность в&nbsp;выдаче</h3>
+        <p class="group__lead">Остановит&nbsp;ли фото палец, который листает ленту.</p>
+        <ol>
+          <li>Узнаётся за&nbsp;секунду и&nbsp;выделяется среди соседей по&nbsp;выдаче</li>
+          <li>Товар крупно и&nbsp;целиком, а&nbsp;не&nbsp;фрагментом</li>
+          <li>Фон контрастный и&nbsp;не&nbsp;спорит с&nbsp;товаром</li>
+        </ol>
+      </article>
+      <article class="group">
+        <h3>Правила и&nbsp;штрафы площадки</h3>
+        <p class="group__lead">Нет&nbsp;ли того, за&nbsp;что карточку понижают или фото отклоняют.</p>
+        <ol>
+          <li>Один товар в&nbsp;кадре, без лишних предметов</li>
+          <li>Текста на&nbsp;главном фото — минимум</li>
+          <li>Фото соответствует товару, без обещаний, которых нет</li>
+        </ol>
+      </article>
+      <article class="group">
+        <h3>Информация на&nbsp;фото</h3>
+        <p class="group__lead">Понятно&nbsp;ли, что это, какого размера и&nbsp;чем лучше.</p>
+        <ol>
+          <li>В&nbsp;галерее есть нужные типы слайдов</li>
+          <li>Есть кадр, по&nbsp;которому понятен размер</li>
+          <li>Один слайд — одна мысль</li>
+          <li>Всё читается с&nbsp;экрана телефона</li>
+        </ol>
+      </article>
+      <article class="group">
+        <h3>Доверие</h3>
+        <p class="group__lead">Похоже&nbsp;ли на&nbsp;товар, за&nbsp;который не&nbsp;страшно заплатить.</p>
+        <ol>
+          <li>Слайды выглядят как одна система, а&nbsp;не&nbsp;набор разных макетов</li>
+          <li>Фото отвечают на&nbsp;вопросы, которые покупатели задают в&nbsp;отзывах</li>
+        </ol>
+      </article>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="price" id="price" aria-labelledby="price-title">
+    <div class="section-head">
+      <h2 class="h2" id="price-title">Начните бесплатно</h2>
+      <p class="section-head__aside">Бесплатный разбор — полноценный ответ, а&nbsp;не&nbsp;приманка: вы получите конкретные правки для обложки. Если захотите разобрать всю карточку, это следующий шаг.</p>
+    </div>
+
+    <div class="plans">
+      <article class="plan">
+        <p class="plan__amount">0&nbsp;₽</p>
+        <h3 class="plan__name">Главное фото</h3>
+        <ul class="ticks">
+          <li>Разбор обложки по&nbsp;критериям выдачи и&nbsp;правил площадки</li>
+          <li>3 главные проблемы и&nbsp;что исправить первым</li>
+          <li>Ответ в&nbsp;Telegram в&nbsp;течение 24 часов</li>
+        </ul>
+        <a class="btn" data-tg href="https://t.me/Artfreelancer" target="_blank" rel="noopener">
+          <span class="btn__label">Прислать ссылку</span>
+          <span class="btn__disc" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg></span>
+        </a>
+      </article>
+
+      <article class="plan plan--full">
+        <p class="plan__amount">1&#8239;500&nbsp;₽</p>
+        <h3 class="plan__name">Вся карточка</h3>
+        <ul class="ticks">
+          <li>Главное фото и&nbsp;вся галерея слайдов</li>
+          <li>Оценка по&nbsp;всем 12 критериям</li>
+          <li>Отчёт в&nbsp;Figma, как в&nbsp;примере выше</li>
+          <li>План правок: что сделать самому за&nbsp;10 минут, а&nbsp;что отдать дизайнеру</li>
+        </ul>
+        <a class="btn btn--light" data-tg href="https://t.me/Artfreelancer" target="_blank" rel="noopener">
+          <span class="btn__label">Заказать полный разбор</span>
+          <span class="btn__disc" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg></span>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about" aria-labelledby="about-title">
+    <div class="about__inner">
+      <h2 class="h2" id="about-title">Обо мне</h2>
+
+      <figure class="about__photo">
+        <img src="assets/photo.jpg" width="1493" height="2000" loading="lazy" alt="Артём Мута за рабочим столом, на мониторе — макеты экранов приложения">
+      </figure>
+
+      <div class="about__text">
+        <p class="about__name">Артём Мута</p>
+        <p class="about__role">Product Designer</p>
+        <p>Проектирую интерфейсы и&nbsp;проверяю, как люди принимают решения на&nbsp;экране. Карточка товара — тот&nbsp;же интерфейс: у&nbsp;неё есть секунда в&nbsp;выдаче и&nbsp;одна задача — получить клик.</p>
+        <p>Смотрю на&nbsp;обложку двумя способами: глазами покупателя, который листает ленту, и&nbsp;через правила площадки. Поэтому в&nbsp;разборе нет вкусовщины — только критерии, баллы и&nbsp;порядок правок.</p>
+        <p class="about__honest">Отзывов на&nbsp;сайте нет: сервис новый, и&nbsp;придумывать их я не&nbsp;стал. Вместо них — настоящий разбор выше.</p>
+        <a class="arrow-link" href="https://artem.vercel.app" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2v7.5h8M9 6.5l3 3-3 3"/></svg>
+          Портфолио — artem.vercel.app
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq" aria-labelledby="faq-title">
+    <h2 class="h2" id="faq-title">Вопросы селлеров</h2>
+    <div class="faq__list">
+      <details>
+        <summary>Нужен&nbsp;ли доступ к&nbsp;кабинету?<span class="faq__icon" aria-hidden="true"></span></summary>
+        <div class="faq__a"><p>Нет. Достаточно ссылки на&nbsp;карточку: всё, что видит покупатель, вижу и&nbsp;я. Логины, пароли и&nbsp;API-ключи не&nbsp;нужны.</p></div>
+      </details>
+      <details>
+        <summary>Сколько ждать?<span class="faq__icon" aria-hidden="true"></span></summary>
+        <div class="faq__a"><p>До&nbsp;24 часов с&nbsp;момента, как пришлёте ссылку. Разбор придёт в&nbsp;Telegram.</p></div>
+      </details>
+      <details>
+        <summary>Вы делаете фото?<span class="faq__icon" aria-hidden="true"></span></summary>
+        <div class="faq__a">
+          <p>Нет, не&nbsp;снимаю. Даю техническое задание дизайнеру: что должно быть в&nbsp;кадре, сколько текста допустимо и&nbsp;в&nbsp;каком порядке идут слайды.</p>
+          <p>Если своего дизайнера нет, могу сам переделать обложку и&nbsp;галерею по&nbsp;этому ТЗ — <a data-tg href="https://t.me/Artfreelancer" target="_blank" rel="noopener">напишите в&nbsp;Telegram</a>, обсудим объём и&nbsp;срок.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Подходит для Ozon или только для&nbsp;Wildberries?<span class="faq__icon" aria-hidden="true"></span></summary>
+        <div class="faq__a"><p>Для обеих площадок. Критерии учитывают правила и&nbsp;Wildberries, и&nbsp;Ozon, а&nbsp;в&nbsp;разборе я отмечаю, что относится к&nbsp;вашей.</p></div>
+      </details>
+      <details>
+        <summary>Чем это лучше советов в&nbsp;чатах селлеров?<span class="faq__icon" aria-hidden="true"></span></summary>
+        <div class="faq__a"><p>В&nbsp;чатах советуют в&nbsp;общем. Здесь — разбор именно вашей обложки по&nbsp;одним и&nbsp;тем&nbsp;же 12 критериям, с&nbsp;баллами и&nbsp;порядком: что исправить первым, а&nbsp;что подождёт.</p></div>
+      </details>
+      <details>
+        <summary>У&nbsp;меня несколько карточек. С&nbsp;какой начать?<span class="faq__icon" aria-hidden="true"></span></summary>
+        <div class="faq__a"><p>Пришлите ссылки в&nbsp;Telegram и&nbsp;напишите, какая приносит больше всего денег или показов, — начнём с&nbsp;неё.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Close -->
+  <section class="close" aria-labelledby="close-title">
+    <h2 class="close__title" id="close-title">Пришлите ссылку на&nbsp;обложку&nbsp;— получите разбор причин низкого CTR через 24&nbsp;часа</h2>
+    <a class="btn btn--light btn--lg" data-tg href="https://t.me/Artfreelancer" target="_blank" rel="noopener">
+      <span class="btn__label">Прислать ссылку в Telegram</span>
+      <span class="btn__disc" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg></span>
+    </a>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <ul class="footer__links">
+    <li><a data-tg href="https://t.me/Artfreelancer" target="_blank" rel="noopener">Telegram @Artfreelancer</a></li>
+    <li><a href="mailto:artemdesigner.work@gmail.com">artemdesigner.work@gmail.com</a></li>
+    <li><a href="privacy.html">Политика обработки персональных данных</a></li>
+  </ul>
+  <p class="footer__legal">© 2026. Плательщик налога на&nbsp;профессиональный доход (самозанятый). Wildberries и&nbsp;Ozon — товарные знаки их правообладателей; сервис с&nbsp;площадками не&nbsp;аффилирован.</p>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>
