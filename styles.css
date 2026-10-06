@@ -448,8 +448,7 @@ button { font: inherit; color: inherit; }
 .about__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 60% 30%; }
 .about__text { display: grid; gap: 16px; max-width: 46ch; justify-items: start; }
 .about__text p { color: var(--ink-soft); text-wrap: pretty; }
-.about__text .about__name { font-size: clamp(1.75rem, 2.4vw, 2.25rem); line-height: 1.1; letter-spacing: -0.03em; color: var(--ink); }
-.about__text .about__role { color: var(--muted); margin-top: -10px; margin-bottom: 12px; }
+.about__text .about__role { color: var(--muted); margin-bottom: 12px; }
 .about__text .about__honest { color: var(--muted); font-size: 15px; padding-top: 16px; border-top: 1px solid var(--neutral-deep); width: 100%; }
 
 /* FAQ ------------------------------------------------------------------- */

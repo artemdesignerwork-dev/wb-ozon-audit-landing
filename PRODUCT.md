@@ -43,7 +43,7 @@ A UX designer's heuristic audit, not a photo studio or an agency: 12 criteria bu
 - Palette pinned by the user (2026-10-05): accent #9B6400, text #333333, neutral #DFDFDF.
 - Hero composition pinned by the user: thepatchsystem.com hero (inset colour panel on a fine grid, huge centred uppercase headline, central image card flanked by two ruled bands, centred subline + CTA with corner badge and down-arrow).
 - No logo/wordmark on the page (user removed it).
-- Owner: Артём Мута, Product Designer. Portfolio https://artem.vercel.app, e-mail artemdesigner.work@gmail.com.
+- Owner: Артём Мута, Product Designer. Portfolio http://artemmdesign.ru (HTTPS cert currently invalid), e-mail artemdesigner.work@gmail.com.
 
 ## Evidence on Hand
 
