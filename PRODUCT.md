@@ -49,7 +49,7 @@ A UX designer's heuristic audit, not a photo studio or an agency: 12 criteria bu
 
 - Real audit "Наушники TWS … (Wildberries)", Figma file YKjbH77xlYCT9RNITpJHto node 9:2, dated 04.10.2026: score 54/100, top-3 problems, 12-heuristic table. Exported with brand redacted to assets/case-cover.png, assets/case-heuristics.png, assets/case-top3.png.
 - No testimonials, client logos, or conversion statistics exist. Never invent them.
-- Owner photo: assets/photo.jpg (supplied by the user 2026-10-05).
+- Owner photo: assets/photo.jpg (supplied by the user 2026-10-05); not shown since the About section was removed 2026-10-07.
 
 ## Product Principles
 

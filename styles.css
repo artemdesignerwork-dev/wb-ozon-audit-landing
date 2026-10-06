@@ -434,23 +434,6 @@ button { font: inherit; color: inherit; }
 .plan--full .ticks li { color: var(--on-accent-soft); border-top-color: var(--accent-line); }
 .plan--full .ticks li::before { color: #fff; }
 
-/* About ----------------------------------------------------------------- */
-.about { background: var(--neutral); margin-top: var(--section); }
-.about__inner {
-  max-width: var(--max); margin: 0 auto;
-  padding: var(--section) var(--gutter);
-  display: grid;
-  grid-template-columns: minmax(0, 4fr) minmax(0, 3.4fr) minmax(0, 4.4fr);
-  gap: clamp(24px, 4vw, 72px);
-  align-items: start;
-}
-.about__photo { aspect-ratio: 4 / 5; border-radius: 18px; overflow: hidden; background: #1a1a1a; }
-.about__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 60% 30%; }
-.about__text { display: grid; gap: 16px; max-width: 46ch; justify-items: start; }
-.about__text p { color: var(--ink-soft); text-wrap: pretty; }
-.about__text .about__role { color: var(--muted); margin-bottom: 12px; }
-.about__text .about__honest { color: var(--muted); font-size: 15px; padding-top: 16px; border-top: 1px solid var(--neutral-deep); width: 100%; }
-
 /* FAQ ------------------------------------------------------------------- */
 .faq { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7.6fr); gap: clamp(24px, 5vw, 96px); align-items: start; }
 .faq__list { border-bottom: 1px solid var(--line); }
@@ -512,8 +495,6 @@ button { font: inherit; color: inherit; }
   .hero__card { grid-column: 1 / -1; grid-row: 1; max-width: 560px; }
   .hero__band { margin-top: 0; }
   .groups { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 56px; }
-  .about__inner { grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); }
-  .about__inner .h2 { grid-column: 1 / -1; }
   .faq { grid-template-columns: 1fr; }
 }
 
@@ -554,8 +535,6 @@ button { font: inherit; color: inherit; }
   .apply__submit .btn { justify-content: space-between; }
   .groups { grid-template-columns: 1fr; row-gap: 48px; }
   .group h3, .group__lead { min-height: 0; }
-  .about__inner { grid-template-columns: 1fr; }
-  .about__photo { max-width: 360px; }
   .faq__a { padding-right: 0; }
   .close { border-radius: 22px; }
 }
