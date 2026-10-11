@@ -195,7 +195,10 @@
     </div>
 
     <div class="groups">
-      <article class="group">
+      <article class="group" tabindex="-1">
+        <div class="demo demo--feed" aria-hidden="true">
+          <span></span><span></span><span class="is-you"><i></i></span><span></span><span></span><span></span>
+        </div>
         <h3>Заметность в&nbsp;выдаче</h3>
         <p class="group__lead">Остановит&nbsp;ли фото палец, который листает ленту.</p>
         <ol>
@@ -204,7 +207,10 @@
           <li>Фон контрастный и&nbsp;не&nbsp;спорит с&nbsp;товаром</li>
         </ol>
       </article>
-      <article class="group">
+      <article class="group" tabindex="-1">
+        <div class="demo demo--rules" aria-hidden="true">
+          <div class="demo__frame"><b></b><b></b><b></b><i></i></div>
+        </div>
         <h3>Правила и&nbsp;штрафы площадки</h3>
         <p class="group__lead">Нет&nbsp;ли того, за&nbsp;что карточку понижают или фото отклоняют.</p>
         <ol>
@@ -213,7 +219,10 @@
           <li>Фото соответствует товару, без обещаний, которых нет</li>
         </ol>
       </article>
-      <article class="group">
+      <article class="group" tabindex="-1">
+        <div class="demo demo--info" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
         <h3>Информация на&nbsp;фото</h3>
         <p class="group__lead">Понятно&nbsp;ли, что это, какого размера и&nbsp;чем лучше.</p>
         <ol>
@@ -223,7 +232,10 @@
           <li>Всё читается с&nbsp;экрана телефона</li>
         </ol>
       </article>
-      <article class="group">
+      <article class="group" tabindex="-1">
+        <div class="demo demo--trust" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
         <h3>Доверие</h3>
         <p class="group__lead">Похоже&nbsp;ли на&nbsp;товар, за&nbsp;который не&nbsp;страшно заплатить.</p>
         <ol>
@@ -275,33 +287,37 @@
 
   <!-- FAQ -->
   <section class="faq" id="faq" aria-labelledby="faq-title">
-    <h2 class="h2" id="faq-title">Вопросы селлеров</h2>
+    <div class="faq__intro">
+      <h2 class="h2" id="faq-title">Вопросы селлеров</h2>
+      <p class="faq__sub">Всё, что спрашивают перед первой проверкой обложки.</p>
+      <p class="faq__note">Не&nbsp;нашли ответ? <a data-tg href="https://t.me/Artfreelancer" onclick="ym(113476350,'reachGoal','tg_click')" target="_blank" rel="noopener">Напишите в&nbsp;Telegram</a> — отвечу лично.</p>
+    </div>
     <div class="faq__list">
       <details>
-        <summary>Нужен&nbsp;ли доступ к&nbsp;кабинету?<span class="faq__icon" aria-hidden="true"></span></summary>
+        <summary>Нужен&nbsp;ли доступ к&nbsp;кабинету?<svg class="faq__chev" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
         <div class="faq__a"><p>Нет. Достаточно ссылки на&nbsp;карточку: всё, что видит покупатель, вижу и&nbsp;я. Логины, пароли и&nbsp;API-ключи не&nbsp;нужны.</p></div>
       </details>
       <details>
-        <summary>Сколько ждать?<span class="faq__icon" aria-hidden="true"></span></summary>
+        <summary>Сколько ждать?<svg class="faq__chev" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
         <div class="faq__a"><p>До&nbsp;24 часов с&nbsp;момента, как пришлёте ссылку. Разбор придёт в&nbsp;Telegram.</p></div>
       </details>
       <details>
-        <summary>Вы делаете фото?<span class="faq__icon" aria-hidden="true"></span></summary>
+        <summary>Вы делаете фото?<svg class="faq__chev" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
         <div class="faq__a">
           <p>Нет, не&nbsp;снимаю. Даю техническое задание дизайнеру: что должно быть в&nbsp;кадре, сколько текста допустимо и&nbsp;в&nbsp;каком порядке идут слайды.</p>
           <p>Если своего дизайнера нет, могу сам переделать обложку и&nbsp;галерею по&nbsp;этому ТЗ — <a data-tg href="https://t.me/Artfreelancer" onclick="ym(113476350,'reachGoal','tg_click')" target="_blank" rel="noopener">напишите в&nbsp;Telegram</a>, обсудим объём и&nbsp;срок.</p>
         </div>
       </details>
       <details>
-        <summary>Подходит для Ozon или только для&nbsp;Wildberries?<span class="faq__icon" aria-hidden="true"></span></summary>
+        <summary>Подходит для Ozon или только для&nbsp;Wildberries?<svg class="faq__chev" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
         <div class="faq__a"><p>Для обеих площадок. Критерии учитывают правила и&nbsp;Wildberries, и&nbsp;Ozon, а&nbsp;в&nbsp;разборе я отмечаю, что относится к&nbsp;вашей.</p></div>
       </details>
       <details>
-        <summary>Чем это лучше советов в&nbsp;чатах селлеров?<span class="faq__icon" aria-hidden="true"></span></summary>
+        <summary>Чем это лучше советов в&nbsp;чатах селлеров?<svg class="faq__chev" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
         <div class="faq__a"><p>В&nbsp;чатах советуют в&nbsp;общем. Здесь — разбор именно вашей обложки по&nbsp;одним и&nbsp;тем&nbsp;же 12 критериям, с&nbsp;баллами и&nbsp;порядком: что исправить первым, а&nbsp;что подождёт.</p></div>
       </details>
       <details>
-        <summary>У&nbsp;меня несколько карточек. С&nbsp;какой начать?<span class="faq__icon" aria-hidden="true"></span></summary>
+        <summary>У&nbsp;меня несколько карточек. С&nbsp;какой начать?<svg class="faq__chev" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
         <div class="faq__a"><p>Пришлите ссылки в&nbsp;Telegram и&nbsp;напишите, какая приносит больше всего денег или показов, — начнём с&nbsp;неё.</p></div>
       </details>
     </div>

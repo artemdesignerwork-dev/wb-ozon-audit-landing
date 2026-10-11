@@ -214,3 +214,37 @@ window.addEventListener('scroll', requestRender, { passive: true });
 window.addEventListener('resize', requestRender);
 desktop.addEventListener('change', requestRender);
 render();
+
+/* FAQ: wrap answer words so they can surface one after another ---------- */
+document.querySelectorAll('.faq__a').forEach((answer) => {
+  let i = 0;
+  // links surface as one piece so their underline stays continuous
+  const walker = document.createTreeWalker(answer, NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT, {
+    acceptNode: (n) => (n.parentElement && n.parentElement.closest('a') && n.nodeName !== 'A' ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT),
+  });
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  nodes.forEach((node) => {
+    if (node.nodeName === 'A') { node.classList.add('w'); node.style.setProperty('--i', i++); return; }
+    if (node.nodeType !== Node.TEXT_NODE || !node.textContent.trim()) return;
+    const frag = document.createDocumentFragment();
+    node.textContent.split(/( +)/).forEach((part) => {
+      if (!part) return;
+      if (/^ +$/.test(part)) { frag.append(part); return; }
+      const w = document.createElement('span');
+      w.className = 'w';
+      w.style.setProperty('--i', i++);
+      w.textContent = part;
+      frag.append(w);
+    });
+    node.replaceWith(frag);
+  });
+});
+
+/* Criteria cards: without hover, play the diagram when a card comes into view */
+if (window.matchMedia('(hover: none)').matches && 'IntersectionObserver' in window) {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => e.target.classList.toggle('is-play', e.intersectionRatio > 0.6));
+  }, { threshold: [0, 0.6, 1] });
+  document.querySelectorAll('.group').forEach((g) => io.observe(g));
+}
