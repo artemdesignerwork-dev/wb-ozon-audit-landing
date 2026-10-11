@@ -248,3 +248,38 @@ if (window.matchMedia('(hover: none)').matches && 'IntersectionObserver' in wind
   }, { threshold: [0, 0.6, 1] });
   document.querySelectorAll('.group').forEach((g) => io.observe(g));
 }
+
+/* Closing visual: rises in with the scroll, tilts toward the pointer ------ */
+(() => {
+  const band = document.querySelector('.close');
+  const visual = band && band.querySelector('.close__visual');
+  if (!visual || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  let queued = false;
+  const onScroll = () => {
+    queued = false;
+    const r = band.getBoundingClientRect();
+    // 0 when the band's top enters the viewport bottom, 1 when it reaches 35% from the top
+    const t = Math.min(1, Math.max(0, (innerHeight - r.top) / (innerHeight * 0.65)));
+    const e = 1 - Math.pow(1 - t, 3);
+    visual.style.setProperty('--rise', ((1 - e) * 90).toFixed(1) + 'px');
+    visual.style.setProperty('--spin', ((1 - e) * 8).toFixed(2) + 'deg');
+  };
+  const queue = () => { if (!queued) { queued = true; requestAnimationFrame(onScroll); } };
+  addEventListener('scroll', queue, { passive: true });
+  addEventListener('resize', queue);
+  onScroll();
+
+  if (window.matchMedia('(hover: hover)').matches) {
+    band.addEventListener('pointermove', (ev) => {
+      const r = band.getBoundingClientRect();
+      const x = (ev.clientX - r.left) / r.width - 0.5;
+      const y = (ev.clientY - r.top) / r.height - 0.5;
+      visual.style.setProperty('--ry', (x * 14).toFixed(2) + 'deg');
+      visual.style.setProperty('--rx', (y * -10).toFixed(2) + 'deg');
+    });
+    band.addEventListener('pointerleave', () => {
+      visual.style.setProperty('--rx', '0deg');
+      visual.style.setProperty('--ry', '0deg');
+    });
+  }
+})();

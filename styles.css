@@ -531,13 +531,37 @@ button { font: inherit; color: inherit; }
   display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(24px, 3vw, 48px); align-items: end;
 }
 .close__copy { display: grid; gap: clamp(28px, 3vw, 44px); justify-items: start; }
-.close__visual { align-self: start; margin: calc(var(--lift) * -1 - clamp(48px, 7vw, 112px) * .4) clamp(-56px, -3vw, -12px) 0 clamp(-48px, -3vw, 0px); }
-.close__visual img {
-  width: 100%; height: auto;
+.close__visual {
+  --rise: 0px; --spin: 0deg; --rx: 0deg; --ry: 0deg;
+  align-self: start;
+  margin: calc(var(--lift) * -1 - clamp(48px, 7vw, 112px) * .4) clamp(-56px, -3vw, -12px) 0 clamp(-48px, -3vw, 0px);
+  perspective: 1200px;
+}
+/* scroll entrance + pointer tilt are driven from app.js through the custom properties */
+.close__float {
+  position: relative;
+  transform: translateY(var(--rise)) rotate(var(--spin)) rotateX(var(--rx)) rotateY(var(--ry));
+  transform-style: preserve-3d;
+  transition: transform .5s var(--ease);
+}
+.close__float img {
+  display: block; width: 100%; height: auto;
   filter: drop-shadow(0 30px 34px rgba(0, 0, 0, .28));
   animation: float 7s ease-in-out infinite;
 }
-@keyframes float { 50% { transform: translateY(-12px) rotate(-1deg); } }
+/* a glint that sweeps across the objects only (masked by the image's own alpha) */
+.close__shine {
+  position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(115deg, transparent 40%, rgba(255, 255, 255, .7) 50%, transparent 60%) no-repeat;
+  background-size: 260% 100%;
+  background-position: 130% 0;
+  -webkit-mask: url("assets/products/visual-audit.webp") center / 100% 100% no-repeat;
+          mask: url("assets/products/visual-audit.webp") center / 100% 100% no-repeat;
+  mix-blend-mode: screen; opacity: .75;
+  animation: float 7s ease-in-out infinite, glint 6s 1.5s ease-in-out infinite;
+}
+@keyframes float { 50% { translate: 0 -12px; rotate: -1deg; } }
+@keyframes glint { 0%, 55% { background-position: 130% 0; } 85%, 100% { background-position: -30% 0; } }
 @media (min-width: 1537px) { .close { max-width: calc(var(--max) - 2 * var(--gutter)); margin-left: auto; margin-right: auto; } }
 .close__title { font-size: clamp(2rem, 3.3vw, 3.25rem); line-height: 1.06; font-weight: 400; letter-spacing: -0.035em; max-width: 18ch; text-wrap: balance; }
 
@@ -609,7 +633,7 @@ button { font: inherit; color: inherit; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .close__visual img { animation: none; }
+  .close__float, .close__float img, .close__shine { animation: none; transition: none; }
   .faq details[open] .faq__a .w { animation: none; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
